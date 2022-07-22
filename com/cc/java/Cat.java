@@ -5,15 +5,16 @@ public class Cat {
     private String name;
     private String furColor;
     private int age;
-    private boolean isFemale;
 
     private int counter;
    
-    public Cat(String name, String furColor, int age, boolean isFemale) {
+
+    
+    public Cat(String name, String furColor, int age, int counter) {
         this.name = name;
         this.furColor = furColor;
         this.age = age;
-        this.isFemale = isFemale;
+        this.counter = counter;
     }
 
     /** Getter */
@@ -29,11 +30,8 @@ public class Cat {
     }
 
     public String getAge() {
-        if (isFemale) {
-           return checkEscaliationLevel(); 
-        } else {
-           return String.valueOf(age);
-        }
+        return checkEscaliationLevel(); 
+
     }
 
     private String checkEscaliationLevel() {
